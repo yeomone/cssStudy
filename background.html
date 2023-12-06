@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* 공통 클래스 */
+        .bg {
+            height: 1200px;
+            background-repeat: no-repeat;
+            background-size: auto 50%;
+            background-attachment: fixed;
+        }
+        /* 개별 클래스 */
+        .bg1 {
+            width: 900px;
+            background-color: lightcyan;
+            background-image: url(./images/babytt.jpg);
+            /* background-position: 0 40%; */
+        }
+        .bg2 {
+            width: 1100px;
+            background-color: cadetblue;
+            background-image: url(./images/panda2.jpg);
+            /* background-position: 30% 80%; */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg bg1"><p>내용 내용 내용...</p></div>
+    <div class="bg bg2"><p>내용 내용 내용...</p></div>
+</body>
+</html>
