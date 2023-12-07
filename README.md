@@ -29,3 +29,21 @@
 * 본문 `12~18px` 내용 글자 크기 기준 `1.3~1.7` 값을 많이 사용한다(평균1.5)
 * 제목 글자의 경우 글자크기에 따라 행간값은 상대적으로 다르기 때문에 자주 체크하며 수정해야 한다.
 ----
+## float (CSS 2.0)
+* left, right 좌우 방향으로만 정렬하는 레이아웃 속성
+* float 해제하고 싶은 대상엔 clear:both 이용해서 해제 가능
+* 정렬되는 형제 대상에 float 명령을 주고 부모엔 height 또는 overflow:hidden을 적용해서 float 오류 해결 가능
+----
+## flex (CSS3)
+* 메인축, 교차축의 방향 기준으로 다양한 정렬을 설정할 수 있는 새로운 CSS3의 레이아웃 속성
+### flex 적용 순서 및 주의사항
+1. 메인축으로 정렬하고 싶은 item 대상 선정
+2. 1번 item의 부모(container)에게 `display:flex` 입력
+3. 부모(container)에게 item 메인축 정렬방향과 줄바꿈의 속성을 `flex-flow:direction wrap` 입력
+4. 부모(container)에게 flex-flow에서 정한 direction에 따라 정렬방법을 `justify-content:정렬방법` 입력
+5. (교차축 설정 - 교차축 대상이 1줄, 2줄인지 체크) 
+5-1. (1줄일 경우) 부모(container)에게 `align-items:값`
+5-2. (2줄일 경우) 부모(container)에게 `align-content:값`
+6. 특정 item만 교차축을 다르게 설정하고 싶다면? 자식(item)에게 `align-self:값`
+7. (선택) item의 태그순서와 다르게 화면에서 보이는 순서를 다르게 하고싶다면? `order:값`
+8. (선택) item의 너비값을 전체 부모 기준으로 일정하게 설정하고 싶다면? `flex:값`
