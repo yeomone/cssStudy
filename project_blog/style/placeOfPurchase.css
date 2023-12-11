@@ -1,20 +1,20 @@
 /* placeOfPurchase.html(구매처) 전용 */
-main {}
-main h1 {color: white;}
-main h2 {color: white;}
+main {padding: 5rem;}
+main h1 {color: white; font-size: 1.25rem;}
+main h2 {color: white; font-size: 1.25rem;}
 main #placeOfPurchase {
     background-color: #f1f1f1;
-    width: 50%;
+    width: 40%;
     margin: 50px auto 0;
 }
 main #placeOfPurchase thead {
-    background-color: rgb(114, 180, 0);
+    background-color: rgb(114, 180, 0, 0.5);
     /* border-bottom: 3px solid #000;} */}
 main #placeOfPurchase thead tr {}
 main #placeOfPurchase thead tr th {padding: 15px;}
-main #placeOfPurchase thead tr th:nth-child(3) {width: 100px;}
+main #placeOfPurchase thead tr th:nth-child(3) {width: 200px;}
 main #placeOfPurchase thead tr th:nth-child(2) {width: 200px;}
-main #placeOfPurchase tbody {background-color: rgb(250, 236, 205);}
+main #placeOfPurchase tbody {background-color: rgb(250, 236, 205, 0.5);}
 main #placeOfPurchase tbody tr {}
 main #placeOfPurchase tbody tr th {}
 main #placeOfPurchase tbody tr td {padding: 20px;}

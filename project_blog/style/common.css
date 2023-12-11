@@ -1,5 +1,6 @@
 /* 공통 header, main, footer css */
 /* header */
+* {cursor: url(https://stardewvalleywiki.com/mediawiki/images/thumb/b/b3/Junimo_Icon.png/32px-Junimo_Icon.png) 4 5, url(cursor_2.svg), /* … ,*/ url(cursor_n.cur) 5 5, auto;}
 body {
     background: url(https://stardewvalley.net/wp-content/uploads/2017/12/stardewbackground.png) no-repeat fixed center center / cover;
 }
