@@ -1,6 +1,9 @@
 /* System.html(시스템) 전용 */
 main {padding: 5rem;}
 main h1 {color: #fff; font-size: 1.25rem; padding-bottom: 15px;}
-main dl {background-color: rgba(255, 255, 255, 0.5);}
+main dl {
+    width: 50%; height: 60vh;
+    background-color: rgba(255, 240, 216, 0.5);
+}
 main dl dt {font-size: 1rem; color: #fff;}
 main dl dd {font-size: 1rem; color: #fff;}

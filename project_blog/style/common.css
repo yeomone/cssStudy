@@ -32,7 +32,7 @@ body header .top a img {
 body header .top a span {
     color: white;
 }
-body header .top a span {}
+body header .top a span:hover {color: lime;}
 /* main */
 body main {
     text-align: center;
