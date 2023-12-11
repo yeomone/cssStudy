@@ -1,0 +1,47 @@
+/* 공통 header, main, footer css */
+/* header */
+body {
+    background: url(https://stardewvalley.net/wp-content/uploads/2017/12/stardewbackground.png) no-repeat fixed center center / cover;
+}
+body header {
+    background-color: rgba(21, 71, 148, 0.8);
+    height: 7rem;
+}
+body header .top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 1rem;
+}
+body header .top h1 {}
+body header .top h1 a {}
+body header .top h1 a img {}
+body header .top a {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3.125rem;
+    font-size: 1.25rem;
+}
+body header .top a img {
+    width: 3rem;
+    margin-bottom: 15px;
+}
+body header .top a span {
+    color: white;
+}
+body header .top a span {}
+/* main */
+body main {
+    text-align: center;
+    height: 110vh;
+    background-image: url(https://stardewvalley.net/wp-content/uploads/2017/12/sdv_divider.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+/* footer */
+body footer {
+    text-align: center;
+    background-color: #f9e58d;
+}
