@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 꾸미기-1</title>
+    <!-- font-awesome 사용 시 필수 link url(버전 확인하고 연결) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .icon li .fa-paw {color: pink; font-size: 24px;}
+        .icon li .fa-hippo {color: purple; font-size: 40px;}
+        .icon li .fa-kiwi-bird {color: green; font-size: 35px;}
+        .icon li .fa-apple-whole {color: lightgreen; font-size: 30px;}
+        .icon li .fa-github {color: darkblue; font-size: 70px;}
+        /* icon1의 가상 자식 요소 만들기 before, after */
+        /* 가상 자식요소의 내용을 삽입해주는 속성 content */
+        /* font-awesome의 unicode 이용 content 삽입시에는 \ (역슬래시) unicode 앞에 반드시 삽입하고 적용하기 */
+        /* unicode로 font-awesome 삽입 시에는 반드시 unicode 삽입한 태그 대상에 font-awesome 전용의 font-family가 설정되어 있어야 한다 */
+        .icon .icon1 {
+            /* background-color: aqua; */
+            /* unicode font-awesome 필수 font-family, font-weight */
+        }
+        .icon .icon1::after {content:'\f578'; font-size: 25px; color: blue;}
+        .icon .icon2::after {content:'\f0c2'; font-size: 30px; color: rgb(120, 238, 253);}
+        .icon .icon3::after {content:'\f2fe'; font-size: 35px; color: saddlebrown;}
+        .icon .icon4::after {content:'\f1e2'; font-size: 40px; color: darkslateblue;}
+        .icon .icon5::after {content:'\f058'; font-size: 45px; color: palevioletred;}
+        /* form checkbox 꾸미기 */
+        #designFrm fieldset ul li #chk {appearance: none;}
+        #designFrm fieldset ul li #chk + label {
+            background-color: yellow;
+        }
+        #designFrm fieldset ul li #chk + label::before {
+            /* 체크 비활성화 */
+            content:'\f058'; color: #aaa;
+        }
+        #designFrm fieldset ul li #chk:checked + label::before {
+            /* 체크 활성화 (content unicode가 동일하므로 생략) */
+            color: #F00;
+        }
+        #designFrm fieldset ul li #ra1 {appearance: none;}
+        #designFrm fieldset ul li #ra2 {appearance: none;}
+        #designFrm fieldset ul li #ra1 + label::before {
+            content:'\f5d1'; color: lightgreen;
+        }
+        #designFrm fieldset ul li #ra2 {}
+        #designFrm fieldset ul li #ra2 + label::before {
+            content:'\f5d1'; color: lightgreen;
+        }
+        #designFrm fieldset ul li #ra1:checked + label::before {content:'\f179'; color:#F00;}
+        #designFrm fieldset ul li #ra2:checked + label::before {content:'\f179'; color:#F00;}
+    </style>
+</head>
+<body>
+    <h1>font-awesome</h1>
+    <p>웹 주소로 아이콘을 사용할 수 있게 해주는 기능</p>
+    <p>font-awesome을 i태그로 삽입하는 경우 > 동적기능 없이 단순 표시</p>
+    <p>font-awesome을 unicode로 삽입하는 경우 > 사용자의 동작으로 동적기능의 변화가 필요할 때 CSS로 삽입</p>
+    <ul class="icon">
+        <li><i class="fa-solid fa-paw"></i></li>
+        <li><i class="fa-solid fa-hippo"></i></li>
+        <li><i class="fa-solid fa-kiwi-bird"></i></i></li>
+        <li><i class="fa-solid fa-apple-whole"></i></li>
+        <li><i class="fa-brands fa-github"></i></li>
+        <li class="icon1 fa">1</li>
+        <li class="icon2 fa">2</li>
+        <li class="icon3 fa">3</li>
+        <li class="icon4 fa">4</li>
+        <li class="icon5 fa">5</li>
+    </ul>
+    <form action="#" method="get" id="designFrm">
+        <fieldset>
+            <legend class="skip">폼 디자인 구성</legend>
+            <ul>
+                <li><input type="text" id="txt"></li>
+                <li>
+                    <input type="checkbox" name="chk" id="chk">
+                    <label for="chk" class="fa">로그인상태유지</label>
+                </li>
+                <li>
+                    <input type="radio" name="ra" id="ra1">
+                    <label for="ra1" class="fa"> 남</label>
+                    <input type="radio" name="ra" id="ra2">
+                    <label for="ra2" class="fa"> 여</label>
+                </li>
+                <li><select name="sele" id="sele">
+                    <option value="none">data1</option>
+                    <option value="val">data2</option>
+                </select></li>
+                <li><button type="button" id="btn">button</button></li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
+<!-- 
+    form요소 중 입력 요소 및 목록, 버튼 요소 등은 css로 자유롭게 디자인 가능하나
+    선택요소(radio, checkbox)는 자체적인 고정 HTML기능으로 css로 디자인 편집이 불가능하다
+    그럼 디자인 하고 싶으면? -> css로 radio, checkbox 를 숨기고 그 자리에 
+    이미지를 대체 삽입하여 동적기능으로 마무리해야한다.
+-->
