@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #popup1 {
+            background-color: yellow;
+            width: 200px; height: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            position: fixed; /*스크롤 관계 없이 화면 고정*/
+            left: 100px; top: 100px;
+            z-index: 200; /*position 속성이 들어갈 경우 사용 가능*/
+        }
+        #popup2 {
+            background-color: pink;
+            width: 300px; height: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            position: fixed; /*스크롤 관계 없이 화면 고정*/
+            left: 200px; top: 200px;
+            z-index: 100;
+        }
+        #wrap {}
+        #wrap header {
+            background-color: aqua;
+            height: 80px; text-align: center;
+            position: sticky; top: -20px;
+        }
+        #wrap header * {border: 1px solid red;}
+        #wrap header h1 {}
+        #wrap header nav {
+            display: inline-block;
+        }
+        #wrap header nav .gnb {
+            display: flex;
+        }
+        #wrap header nav .gnb > li {
+            /* width: 100px; */
+            position: relative;
+        }
+        /* 메인메뉴에 마우스를 올렸을 때 조건 생성 */
+        #wrap header nav .gnb > li:hover .lnb {display: flex;}
+        #wrap header nav .gnb > li > a {
+            width: 100px; padding: 7px 0;
+            display: block;
+        }
+        #wrap header nav .gnb > li > .lnb {
+            position: absolute; left: 0; width: max-content;
+            display: flex; 
+            display: none; /*숨기기*/
+        }
+        #wrap header nav .gnb > li > .lnb li {}
+        #wrap header nav .gnb > li > .lnb li a {
+            padding: 10px 40px; display: block; 
+        }
+        #wrap main {background-color: green; height: 200vh;}
+        #wrap footer {background-color: tomato; height: 150px;}
+    </style>
+</head>
+<body>
+    <!-- 일회성 이벤트, 공지사항 팝업 -->
+    <div id="popup1">이벤트1</div>
+    <div id="popup2">이벤트2</div>
+    <!-- 사이트 시작 -->
+    <div id="wrap">
+        <header>
+            <h1>로고</h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a>
+                        <ul class="lnb">
+                            <li><a href="#">sub1</a></li>
+                            <li><a href="#">sub2</a></li>
+                            <li><a href="#">sub3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
