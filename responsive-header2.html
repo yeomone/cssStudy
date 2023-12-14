@@ -1,0 +1,78 @@
+<!-- responsive-.h_bg header1.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 header2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* min-width 
+            mobile 320 이상~ -> 
+            tablet 650~ -> 
+            desktop 1200~ 순서 설계 
+        */
+        /*1~(320)~649*/
+        @media screen and (min-width:1px){
+            .h_bg {background-color:#eee; min-width:320px;}
+            .h_bg header {
+                padding:0 20px; height:64px;
+                display:flex; flex-flow:row nowrap;
+                justify-content:space-between; align-items:center;
+                position:relative;
+            }
+            .h_bg header h1 {}
+            .h_bg header h1 a {}
+            .h_bg header .gnb {display:none;}/*tablet, desktop 보이는용*/
+            .h_bg header .gnb a {}
+            .h_bg header .all_nav {}
+            .h_bg header .m_nav {
+                position:absolute; top:64px; right:0;
+                background-color:#222;
+                height:100vh; display:flex; flex-flow:column nowrap;
+                width:226px; text-align:center; padding:0 20px;
+            }
+            .h_bg header .m_nav a {
+                color:#fff; padding:20px 0;
+                border-bottom:1px dashed #fff;
+            }
+            main {height:300vh; background:linear-gradient(180deg, yellow, yellowgreen);}
+            footer {height:100px; background-color:aqua;}
+        }/*320~*/
+        @media screen and (min-width:650px){
+            .h_bg header .gnb {display:flex;}
+            .h_bg header .gnb a {margin-left:16px;}
+            .h_bg header .all_nav {display:none;}
+            .h_bg header .m_nav {display:none;}
+        }
+        @media screen and (min-width:1200px){
+            .h_bg header {max-width:1200px; margin:0 auto;}
+        }
+    </style>
+</head>
+<body>
+    <div class="h_bg">
+        <header>
+            <h1><a href="#">포인핸드</a></h1>
+            <nav class="gnb">
+                <a href="#">포인핸드란?</a>
+                <a href="#">보호소오는길</a>
+                <a href="#">입양문의</a>
+                <a href="#">초보집사 도움말</a>
+                <a href="#">행사/이벤트</a>
+            </nav>
+            <a href="#" class="all_nav"><i class="fa-solid fa-bars"></i></a>
+            <nav class="m_nav">
+                <a href="#">포인핸드란?</a>
+                <a href="#">보호소오는길</a>
+                <a href="#">입양문의</a>
+                <a href="#">초보집사 도움말</a>
+                <a href="#">행사/이벤트</a>
+            </nav>
+        </header>
+    </div>
+    <main>main</main>
+    <footer>footer</footer>
+</body>
+</html>

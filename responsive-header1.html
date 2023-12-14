@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 Header1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* desktop */
+        .h_bg {
+            background-color: #eee; 
+            /* fixed: header 모습 그대로 유지하며 고정하고 싶을 때 */
+            /* position: fixed; left: 0; top: 0; width: 100%; */
+            /* sticky: 사용자의 스크롤 위치에 따라 header의 전부가 아닌 일부 영역부터 보여주고 싶을 때 */
+            position: sticky; top: -64px;
+        }
+        .h_bg header {
+            border: 2px solid red;
+            /* width: calc(100% - 40px); margin: 0 auto; */
+            max-width: 1200px; padding: 0 20px; margin: 0 auto; height: 64px; width: 100%; 
+            display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center;
+        }
+        .h_bg header h1 {}
+        .h_bg header h1 a {}
+        .h_bg header .gnb {}
+        .h_bg header .gnb a {margin-left: 16px;}
+        .h_bg header .gnb a:first-child {margin-left: 0;}
+        /* desktop --- 모바일 전용 숨기기 */
+        .h_bg header .all_nav {display: none;}
+        .h_bg header .all_nav .fa-bars {}
+        .h_bg header .m_nav {display: none;}
+        .h_bg header .m_nav a {}
+        /* main+footer */
+        main {background: radial-gradient(circle, red, blue); height: 300vh;}
+        footer {background-color: beige; height: 100px;}
+        /* tablet */
+        @media screen and (max-width:1024px) {}
+        /* mobile */
+        @media screen and (max-width:650px) {
+            .h_bg header {}
+            .h_bg header .gnb {display: none;}
+            .h_bg header .all_nav {display: block;}
+            .h_bg header .all_nav .fa-bars {}
+            .h_bg header .m_nav {
+                background-color: #000;
+                display: flex; flex-flow: column nowrap;
+                text-align: center; padding: 0 23px 0 17px;
+                width: 226px; position: absolute;
+                top: 64px; right: 0; height: 100vh;
+            }
+            .h_bg header .m_nav a {
+                color: #fff;
+                border-bottom: 1px dashed #fff;
+                padding: 16px; 
+            }
+            .h_bg header .m_nav a:last-child {border: none;}
+        }
+    </style>
+</head>
+<body>
+    <div class="h_bg">
+            <header>
+        <h1><a href="#">포인핸드</a></h1>
+        <nav class="gnb">
+            <a href="#">포인핸드란?</a>
+            <a href="#">보호소오는길</a>
+            <a href="#">입양문의</a>
+            <a href="#">초보집사 도움말</a>
+            <a href="#">행사/이벤트 </a>
+        </nav>
+        <a href="#" class="all_nav"><i class="fa-solid fa-bars"></i></a>
+        <nav class="m_nav">
+            <a href="#">포인핸드란?</a>
+            <a href="#">보호소오는길</a>
+            <a href="#">입양문의</a>
+            <a href="#">초보집사 도움말</a>
+            <a href="#">행사/이벤트 </a>
+        </nav>
+    </header>
+    </div>
+    <main>main</main>
+    <footer>footer</footer>
+</body>
+</html>
