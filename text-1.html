@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text1</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <style>
+        ul {width: 500px;}
+        ul li {
+            display: flex; flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        ul li a {
+            background: yellow;
+            width: 70%;
+            white-space: nowrap; /* 줄바꿈 안함 */
+            overflow: hidden; /* 넘침 글자 숨기기 */
+            text-overflow: ellipsis;
+        }
+        ul li a span {}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">제목제목제목제목제목제목제목제목제목제목제목제목제목</a>
+            <sapn>2023-12-25</sapn>
+        </li>
+    </ul>
+</body>
+</html>

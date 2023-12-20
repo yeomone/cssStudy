@@ -1,0 +1,16 @@
+/* 배경 */
+main .bg_wrap {}
+main .bg_wrap .bg1 {background-image: url(../images/bg_cloud.png); animation: right 100s linear infinite;}
+main .bg_wrap .bg2 {background-image: url(../images/bg_city1.png); animation: right 40s linear infinite;}
+main .bg_wrap .bg3 {background-image: url(../images/bg_city2.png); animation: right 10s linear infinite;}
+/* 타이어 */
+main .car #left_tire {animation: rotate 1s linear infinite;}
+main .car #right_tire {animation: rotate 1s linear infinite;}
+@keyframes right {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 100vw;}
+}
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
